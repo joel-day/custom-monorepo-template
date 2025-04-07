@@ -1,17 +1,26 @@
-# ChalkLand
+# Custom Project Template
 
-This is a fictional sports league where there are 18 teams and 1000s of players equiped with unique strengths across 3 primary and 5 secondary skills. Each team and player has a location on the map, which influences both trait generation and player preference for teams. Just like in real-world major sports leagues, the teams draft players, play seasonal matchups, and fight for the championship. 
-
-The draft occurs in the offseason, and considers the custom team and player preferences (teams prefer players with certain skills, while players prefer teams based on location and last years performance). The teams and players are generated using notebooks and the draft and games are executed using python scripts as packages within the repo. 
+This template builds a mono-repo with its own virtual environment. It configures tools to ensure the code runs, follows PEP8 guidelines, and runs on Linux, Windows, and Mac - as well as Python versions 3.10, 3.11, & 3.12. 
 
 ## Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/joel-day/chalkland.git
+git clone https://github.com/joel-day/project-template-custom-cookiecutter.git
 
-# Move to repository directory
-cd chalkland
+# Remove git's connection to project-template-custom-cookiecutter.git
+git remote remove origin
+
+# Manually create new repository in Github named "new-project-repo" and rename the locally cloned template to match the name
+
+# Move to the renamed directory
+cd new-project-repo
+
+# Connect to the new repository
+git remote add origin https://github.com/joel-day/new-project-repo.git
+
+# Ensure you are connected to the new repository
+git remote -v
 
 # Create the virtual environment
 uv venv .venv
@@ -42,4 +51,3 @@ pytest
 flake8 .
 ```
 
-## Features Coming Soon

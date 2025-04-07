@@ -1,8 +1,8 @@
 [project]
-name = "chalkland"              # Package name (for identification and installation)
+name = "project-template-custom-cookiecutter"              # Package name (for identification and installation)
 version = "0.1.0"               # Package version
-description = "Fictional sports league"
-# authors = [{ name = "chalkjuice", email = "joelday.business@gmail.com" }]
+description = "Project Template (Mono-repo)"
+# authors = [{ name = "joelrday", email = "joelday.business@gmail.com" }]
 # license = { text = "MIT" }
 readme = "README.md"            # Path to your project's README file
 requires-python = ">=3.10"      # Minimum Python version required
@@ -54,7 +54,6 @@ filterwarnings = [
     "ignore::DeprecationWarning",
     "ignore::PendingDeprecationWarning"
 ]
-# Define custom markers
 markers = [
     "slow: marks tests as slow",
     "integration: marks tests as integration tests"
