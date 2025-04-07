@@ -11,7 +11,7 @@ git clone https://github.com/joel-day/project-template-custom-cookiecutter.git
 # Remove git's connection to project-template-custom-cookiecutter.git
 git remote remove origin
 
-# Manually create new repository in Github named "new-project-repo" and rename the locally cloned template to match the name
+# Manually create new repository in Github named "new-project-repo" with no README, and rename the locally cloned template to match the name
 
 # Move to the renamed directory
 cd new-project-repo
@@ -21,6 +21,9 @@ git remote add origin https://github.com/joel-day/new-project-repo.git
 
 # Ensure you are connected to the new repository
 git remote -v
+
+# --rebase keeps your history clean by replaying your commits on top of what’s already in the remote
+git pull origin main --rebase 
 
 # Create the virtual environment
 uv venv .venv
@@ -34,6 +37,9 @@ uv sync
 
 # (OPTIONAL) Sync environment based on dependencies across all packages' pyproject.toml files
 uv sync --all-packages
+
+# Use this to push changes back to github
+git push --set-upstream origin main
 ```
 
 ## Included Tools & Packages
