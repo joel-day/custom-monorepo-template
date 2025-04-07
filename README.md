@@ -4,27 +4,38 @@ This template builds a mono-repo with its own virtual environment. It configures
 
 ## Installation
 
+ On Github, manually create a new repository 'new-repo-name'
+
 ```bash
 # Clone the repository
 git clone https://github.com/joel-day/project-template-custom-cookiecutter.git
 
-# Remove git's connection to project-template-custom-cookiecutter.git
-git remote remove origin
+# Move into the local repository
+cd project-template-custom-cookiecutter
+
+# Remove git's connection and all commit history ect from the original repository
+Remove-Item -Recurse -Force .git
 
 # Manually create new repository in Github named "new-project-repo" with no README, and rename the locally cloned template to match the name
+cd ..
+mv project-template-custom-cookiecutter new-repo-name
+cd new-repo-name
 
-# Move to the renamed directory
-cd new-project-repo
+# Push template into the new repo
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/your-username/my-new-template.git
+git push -u origin main
 
-# Connect to the new repository
-git remote add origin https://github.com/joel-day/new-project-repo.git
-
-# Ensure you are connected to the new repository
+# (OPTIONAL) Ensure you are connected to the new repository
 git remote -v
+```
 
-# --rebase keeps your history clean by replaying your commits on top of what’s already in the remote
-git pull origin main --rebase 
+## Setup Virtual Environment and Dependencies
 
+```bash
 # Create the virtual environment
 uv venv .venv
 
@@ -37,9 +48,6 @@ uv sync
 
 # (OPTIONAL) Sync environment based on dependencies across all packages' pyproject.toml files
 uv sync --all-packages
-
-# Use this to push changes back to github
-git push --set-upstream origin main
 ```
 
 ## Included Tools & Packages
