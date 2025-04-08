@@ -26,7 +26,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/your-username/my-new-template.git
+git remote add origin https://github.com/your-username/new-repo-name.git
 git push -u origin main
 
 # (OPTIONAL) Ensure you are connected to the new repository
