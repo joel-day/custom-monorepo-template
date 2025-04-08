@@ -1,4 +1,4 @@
-# Custom Project Template
+# Custom Monorepo Template
 
 This template builds a mono-repo with its own virtual environment. It configures tools to ensure the code runs, follows PEP8 guidelines, and runs on Linux, Windows, and Mac - as well as Python versions 3.10, 3.11, & 3.12. 
 
