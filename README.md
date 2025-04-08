@@ -8,10 +8,10 @@ This template builds a mono-repo with its own virtual environment. It configures
 
 ```bash
 # Clone the repository
-git clone https://github.com/joel-day/project-template-custom-cookiecutter.git
+git clone https://github.com/joel-day/custom-monorepo-template.git
 
 # Move into the local repository
-cd project-template-custom-cookiecutter
+cd custom-monorepo-template
 
 # Remove git's connection and all commit history ect from the original repository
 Remove-Item -Recurse -Force .git
