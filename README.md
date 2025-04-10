@@ -18,7 +18,7 @@ Remove-Item -Recurse -Force .git
 
 # Manually create new repository in Github named "new-project-repo" with no README, and rename the locally cloned template to match the name
 cd ..
-mv project-template-custom-cookiecutter new-repo-name
+mv custom-monorepo-template new-repo-name
 cd new-repo-name
 
 # Push template into the new repo
